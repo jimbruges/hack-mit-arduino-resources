@@ -109,12 +109,58 @@ main {
 }
 
 .hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(36px, 7vw, 80px);
+  align-items: center;
   order: 0;
   padding: 56px 0 64px;
 }
 
 .hero-copy {
   max-width: 720px;
+}
+
+.share-qr {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  max-width: 360px;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.qr-image-link {
+  display: block;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.share-qr img {
+  display: block;
+  width: 112px;
+  height: 112px;
+}
+
+.share-qr h2 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.share-qr p {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.share-qr div > a {
+  color: var(--arduino-dark);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-underline-offset: 3px;
 }
 
 .eyebrow {
@@ -510,6 +556,11 @@ h1 {
   background: var(--blue);
 }
 
+.edge-impulse-icon {
+  color: var(--ink);
+  background: var(--lime);
+}
+
 .group-label h3 {
   margin: 1px 0 5px;
   font-size: 1.05rem;
@@ -661,6 +712,10 @@ footer p {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
   .challenge-section {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -691,12 +746,17 @@ footer p {
   }
 
   .hero {
-    gap: 54px;
-    padding: 64px 0 76px;
+    gap: 32px;
+    padding: 48px 0 56px;
   }
 
   h1 {
     font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .share-qr {
+    width: 100%;
+    max-width: 440px;
   }
 
   .challenge-section,
