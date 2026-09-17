@@ -488,6 +488,45 @@ h1 {
   font-weight: 500;
 }
 
+.workshop-slides {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.workshop-slides img {
+  width: 64px;
+  height: 64px;
+  padding: 3px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.workshop-slides strong,
+.workshop-slides small {
+  display: block;
+}
+
+.workshop-slides strong {
+  color: var(--arduino-dark);
+  font-size: 0.86rem;
+}
+
+.workshop-slides small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.workshop-slides:hover strong,
+.workshop-slides:focus-visible strong {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .event-number {
   position: absolute;
   top: 28px;
