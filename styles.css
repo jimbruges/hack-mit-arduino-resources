@@ -488,6 +488,12 @@ h1 {
   font-weight: 500;
 }
 
+.event-details .event-location {
+  margin-top: 10px;
+  color: var(--arduino-dark);
+  font-weight: 600;
+}
+
 .workshop-slides {
   display: inline-flex;
   gap: 12px;
