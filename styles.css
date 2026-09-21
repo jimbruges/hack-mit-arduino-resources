@@ -37,6 +37,53 @@ main {
   flex-direction: column;
 }
 
+.event-over-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  order: -1;
+  margin-top: 24px;
+  padding: 24px 28px;
+  color: var(--white);
+  background: var(--arduino-dark);
+  border-radius: 10px;
+}
+
+.event-over-banner .eyebrow {
+  margin-bottom: 8px;
+  color: var(--lime);
+}
+
+.event-over-banner h2 {
+  margin-bottom: 6px;
+  font-size: 1.45rem;
+  letter-spacing: -0.03em;
+}
+
+.event-over-banner p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.event-over-banner > a {
+  flex: 0 0 auto;
+  padding: 11px 14px;
+  color: var(--ink);
+  background: var(--lime);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.event-over-banner > a:hover,
+.event-over-banner > a:focus-visible {
+  background: var(--white);
+}
+
 .page-shell {
   width: min(1060px, calc(100% - 40px));
   margin: 0 auto;
@@ -822,6 +869,13 @@ footer p {
 
   .site-nav {
     display: none;
+  }
+
+  .event-over-banner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 22px;
   }
 
   .hero {
